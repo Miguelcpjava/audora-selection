@@ -14,7 +14,7 @@ Projeto da Seleção Audora
     For access: http://localhost:8080/swagger-ui.html
 
 ## First Step
-Create DataBase in Postgres like this:
+Create DataBase in postgres like this:
 
 ```sql
 CREATE DATABASE audora
@@ -55,7 +55,7 @@ INSERT INTO tbl_produto(
 
 Let´s go next step.
 
-With PostMan and with HttpMethod equals POST and with Url = users/auth write in the body like this:
+With POSTMan and with HttpMethod equals **POST** and with Url = users/auth write in the body like this:
 ```json
 {
     "username":"admin@mail.com",
@@ -75,7 +75,8 @@ Finish? No!
 You not enough satisfied, let´s create a new user like this:
 *URL: 'users/create'
 
-```json {
+```json 
+{
    "username": YouChoose,
     "password" : YouChooseAgain,
     "administrador" : I don't need to talk anymore,
@@ -88,23 +89,25 @@ It´s ok! You have a new User, let´s do it again the steps generate token
 Other url:
 
 ### Category Product:  
-* CREATE - POST category/create
-* LIST  - GET category/list/{nome}
+* *CREATE* - **POST** category/create
+* *LIST*  - **GET** category/list/{nome}
 
 ### Product
-* CREATE - POST   product/create
-* LIST   - GET    product/consulta/{idProduct}
-* DELETE - DELETE product/delete/{IdProduct}
+* *CREATE* - **POST**   product/create
+* *LIST*   - **GET**    product/consulta/{idProduct}
+* *DELETE* - **DELETE** product/delete/{IdProduct}
 
 ### Discount
-* CREATE - POST   discount/create
+* *CREATE* - **POST**   discount/create
 
 ### Shop Cart
-* SEARCH  - GET    carrinho/status/{usuarioId}/{carrinhoId}
-* LIST    - GET    carrinho/listarItem/{carrinhoId}
-* ADD     - POST   carrinho/adicionar/{usuarioId}/{carrinhoId}
-* DELETE  - DELETE carrinho/delete/{carrinhoId}/{produtoId}
-* CLOSE   - PATCH  carrinho/finalizar/{carrinhoId}
-* ALTER   - PATCH  carrinho/alterar/quantidade/produto/aumentar/{carrinhoId}/{produtoId}
-* ALTER   - PATCH  carrinho/alterar/quantidade/produto/diminuir/{carrinhoId}/{idProduto}
-* CLEAR   - PUT    carrinho/limparCarrinho
+* *SEARCH*  - **GET**    carrinho/status/{usuarioId}/{carrinhoId}
+* *LIST*    - **GET**    carrinho/listarItem/{carrinhoId}
+* *ADD*     - **POST**   carrinho/adicionar/{usuarioId}/{carrinhoId}
+* *DELETE*  - **DELETE** carrinho/delete/{carrinhoId}/{produtoId}
+* *CLOSE*   - **PATCH**  carrinho/finalizar/{carrinhoId}
+* *ALTER*   - **PATCH**  carrinho/alterar/quantidade/produto/aumentar/{carrinhoId}/{produtoId}
+* *ALTER*   - **PATCH**  carrinho/alterar/quantidade/produto/diminuir/{carrinhoId}/{idProduto}
+* *CLEAR*   - **PUT**    carrinho/limparCarrinho
+
+For me, this selection was an indescribable professional growth, thanks!
