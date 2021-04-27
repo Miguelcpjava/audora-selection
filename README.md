@@ -56,12 +56,13 @@ INSERT INTO tbl_produto(
 Let´s go next step.
 
 With PostMan and with HttpMethod equals POST and with Url = users/auth write in the body like this:
-
+```json
 {
     "username":"admin@mail.com",
     "password" : "secret",
     "admin" : true
 }
+```
 
 # Step Generate Token
 
@@ -72,13 +73,15 @@ And in PostMan on the tab Authorization choose the option Barear Token and paste
 Finish? No!
 
 You not enough satisfied, let´s create a new user like this:
-URL: 'users/create'
-{
+*URL: 'users/create'
+
+```json {
    "username": YouChoose,
     "password" : YouChooseAgain,
     "administrador" : I don't need to talk anymore,
     "enabled" : true
 }
+```
 
 It´s ok! You have a new User, let´s do it again the steps generate token
 
