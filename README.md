@@ -13,10 +13,10 @@ Projeto da Seleção Audora
 ## Rest API Documentation, 
     For access: http://localhost:8080/swagger-ui.html
 
-## First 
+## First Step
 Create DataBase in Postgres like this:
 
-´´´
+```sql
 CREATE DATABASE audora
   WITH OWNER = postgres
        ENCODING = 'UTF8'
@@ -25,23 +25,33 @@ CREATE DATABASE audora
        LC_CTYPE = 'Portuguese_Brazil.1252'
        CONNECTION LIMIT = -1;
        
-´´´
+```
 
 Ready! You can run application, but don´t forget that after do it:
 
-1º: INSERT INTO tbl_user(enabled, password, username, administrador)
+1º: 
+```sql
+INSERT INTO tbl_user(enabled, password, username, administrador)
     VALUES (true, '$2a$10$GHqUauSoqUNupt16TC3KVudJC9mf.l.wSmgLSMoy.AA37qPMWO7CS', 'client@mail.com', false);
     INSERT INTO tbl_user(enabled, password, username, administrador)
     VALUES (true, '$2a$10$gjErDA2C/UpaWfoyI4Ei7.mDq8HhbdtGD3fIGjsOm03wnAO1rmyea', 'admin@mail.com', true);
+```
 
-2º: INSERT INTO tbl_categoria(nome) VALUES ('Biscoito');
+2º: 
+```sql
+    INSERT INTO tbl_categoria(nome) VALUES ('Biscoito');
     INSERT INTO tbl_categoria(nome) VALUES ('Limpeza');
+```
 
-3º: INSERT INTO tbl_produto(
+
+3º: 
+```sql 
+INSERT INTO tbl_produto(
              nome, preco, categoria_id)
     VALUES ('Cookies', 3.00, 1);
+```
 
-Ohhh yes!
+**Ohhh yes!**
 
 Let´s go next step.
 
